@@ -16,7 +16,7 @@ public class Tecnicos {
 	@Id
 	@Column(name="ID")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String Id_Tec;
+	private int Id_Tec;
 	@Column(name="Nombre")
     private String Nombre_Tec;
 	@Column(name="Apellido")
@@ -24,12 +24,20 @@ public class Tecnicos {
     private ArrayList<String>Especialidades=new ArrayList<>();
     @Column(name="Disponibilidad")
     private Boolean Disponible=Boolean.TRUE;
+    
+    public Tecnicos() {
+    	
+    }
+    
+    public Tecnicos(String Nombre_Tec,String Apellido_Tec,Boolean Disponible) {
+    	
+    }
 
-    public String getId_Tec() {
+    public int getId_Tec() {
         return Id_Tec;
     }
 
-    public void setId_Tec(String id_Tec) {
+    public void setId_Tec(int id_Tec) {
         Id_Tec = id_Tec;
     }
 

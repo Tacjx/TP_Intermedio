@@ -23,8 +23,23 @@ public class Incidente {
 	    private String tipo;
 	    @Column(name="Estado")
 	    private String Estado;
+	    
+	    public Incidente() {
+	    	
+	    }
+	    public Incidente(String nombreS,String descripcion,String tipo,String Estado) {
+	    	
+	    }
+	    
+	    public int getID() {
+	        return ID;
+	    }
 
-	    public String getNombreS() {
+	    public void setID(int ID) {
+	        this.ID = ID;
+	    }
+	    
+	    String getNombreS() {
 	        return nombreS;
 	    }
 

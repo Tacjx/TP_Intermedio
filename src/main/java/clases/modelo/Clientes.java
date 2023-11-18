@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -11,6 +13,9 @@ import jakarta.persistence.Table;
 @Table(name="Clientes")
 public class Clientes {
 	@Id
+	@Column(name="ID")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int ID;
 	@Column(name="Cuit")
 	private String Cuit;
 	@Column(name="Nombre")
@@ -20,6 +25,14 @@ public class Clientes {
 	@Column(name="Razon Social")
     private String Razon_Social;
     private ArrayList<String>Servicios=new ArrayList<>();
+    
+    public Clientes() {
+    	
+    }
+    
+    public Clientes(String Cuit,String Nombre_Cliente,String Apellido_Cliente,String Razon_Social) {
+    	
+    }
 
     public String getCuit() {
         return Cuit;
