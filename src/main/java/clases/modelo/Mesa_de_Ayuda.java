@@ -1,7 +1,7 @@
-package Java_Intermedio;
+package clases.modelo;
 
 public class Mesa_de_Ayuda {
-	public void Llamada(Sistema s){
+	public void Llamada(){
         Clientes c=new Clientes();
         System.out.println("Buenos dias, se comunico con la mesa de ayuda de la empresa" +
                 " Indique su Cuit y Razon Social para poder continuar:");

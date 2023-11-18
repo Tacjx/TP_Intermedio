@@ -1,4 +1,4 @@
-package Java_Intermedio;
+package clases.modelo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

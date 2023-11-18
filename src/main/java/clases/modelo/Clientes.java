@@ -1,4 +1,4 @@
-package Java_Intermedio;
+package clases.modelo;
 
 import java.util.ArrayList;
 
