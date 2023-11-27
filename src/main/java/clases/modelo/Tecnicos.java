@@ -13,6 +13,8 @@ import jakarta.persistence.Table;
 @Table(name="Tecnicos")
 public class Tecnicos {
 	
+	//faltaria un metodo resolver incidente ?
+	
 	@Id
 	@Column(name="ID")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
