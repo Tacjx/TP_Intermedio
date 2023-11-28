@@ -7,7 +7,7 @@
 <property name="connection.url">jdbc:mysql://localhost/hibernate_db_1</property>
 <property name="connection.username">root</property>
 <property name="connection.password"></property>
-<property name="hbm2ddl.auto">update</property>
+<property name="hbm2ddl.auto">create</property>
 <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 <property name="hibernate.show_mysql">true</property>
 <property name="hibernate.transaction.jta.platform">true</property>

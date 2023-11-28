@@ -55,6 +55,14 @@ public class Usuario {
         this.telefono = telefono;
     }
     
+    public int getId() {
+        return id;
+    }
+    
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     @Override
 	public String toString() {
 		return "Servicio[id=" + id + ",nombre=" + nombre + " ,email=" + email +

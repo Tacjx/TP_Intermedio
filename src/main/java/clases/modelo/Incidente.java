@@ -11,41 +11,63 @@ import jakarta.persistence.Table;
 @Table(name="Incidente")
 public class Incidente {
 	    @Id
-	    @Column(name="ID")
+	    @Column(name="id")
 	    @GeneratedValue(strategy=GenerationType.IDENTITY)
-	    private int ID;
-	    @Column(name="nombre del servicio")
-	    private String nombreS;
+	    private int id;
+	    
+	    @Column(name="idServicio")
+	    private int idServicio;
+	    
+	    @Column(name="idTecnico")
+	    private int idTecnico;
+	    
+	    @Column(name="idUsuario")
+	    private int idUsuario;
+	    
 	    @Column(name="descripcion")
 	    private String descripcion;
 
-	    @Column(name="tipo de incidente")
-	    private String tipo;
-	    @Column(name="Estado")
-	    private String Estado;
 	    
 	    public Incidente() {
 	    	
 	    }
-	    public Incidente(String nombreS,String descripcion,String tipo,String Estado) {
+	    public Incidente(int idServicio, int idTecnico, int idUsuario, String descripcion) {
 	    	
 	    }
 	    
-	    public int getID() {
-	        return ID;
+	    public int getIdServicio() {
+	        return idServicio;
 	    }
 
-	    public void setID(int ID) {
-	        this.ID = ID;
+	    public void setIdServicio(int idServicio) {
+	        this.idServicio = idServicio;
 	    }
 	    
-	    String getNombreS() {
-	        return nombreS;
+	    
+	    public int getIdTecnico() {
+	        return idTecnico;
 	    }
 
-	    public void setNombreS(String nombreS) {
-	        this.nombreS = nombreS;
+	    public void setIdTecnico(int idTecnico) {
+	        this.idTecnico = idTecnico;
 	    }
+	    
+	    public int getIdUsuario() {
+	        return idUsuario;
+	    }
+
+	    public void setIdUsuario(int idUsuario) {
+	        this.idUsuario = idUsuario;
+	    }
+	    
+	    public int getId() {
+	        return id;
+	    }
+
+	    public void setId(int id) {
+	        this.id = id;
+	    }
+	    
 
 	    public String getDescripcion() {
 	        return descripcion;
@@ -54,21 +76,12 @@ public class Incidente {
 	    public void setDescripcion(String descripcion) {
 	        this.descripcion = descripcion;
 	    }
+	    
+	    @Override
+		public String toString() {
+			return "Incidente[id=" + id + ",idServicio=" + idServicio + " ,idTecnico=" + idTecnico +
+					" ,idUsuario=" + idUsuario +" ,descripcion="+descripcion+ "]";
+		}
 
-	    public String getTipo() {
-	        return tipo;
-	    }
-
-	    public void setTipo(String tipo) {
-	        this.tipo = tipo;
-	    }
-
-	    public String getEstado() {
-	        return Estado;
-	    }
-
-	    public void setEstado(String estado) {
-	        Estado = estado;
-	    }
 
 }
