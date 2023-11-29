@@ -95,7 +95,7 @@ public class Serviciocontrolador {
 		return "Fin del Listado de Servicios";
 	}
 	
-	public String leerServicio(int id) {
+	public Servicio leerServicio(int id) {
 		SessionFactory sessionFactory=new
 				Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Servicio.class).buildSessionFactory();
 		Session session=sessionFactory.openSession();
@@ -106,12 +106,14 @@ public class Serviciocontrolador {
 			session.getTransaction().commit();
 			sessionFactory.close();
 			
-			return "Servicio ID:"+ id +": "+servicio.toString();
+			return servicio;
+			//return "Servicio ID:"+ id +": "+servicio.toString();
 			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		return "Error al intentar leer el Servicio";
+		return null;
+		//return "Error al intentar leer el Servicio";
 	}
 
 }

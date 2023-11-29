@@ -97,7 +97,7 @@ public class Usuariocontrolador {
 		return "Fin del Listado de Usuarios";
 	}
 	
-	public String leerUsuario(int id) {
+	public Usuario leerUsuario(int id) {
 		SessionFactory sessionFactory=new
 				Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).buildSessionFactory();
 		Session session=sessionFactory.openSession();
@@ -108,12 +108,14 @@ public class Usuariocontrolador {
 			session.getTransaction().commit();
 			sessionFactory.close();
 			
-			return "Usuario ID:"+ id +": "+usuario.toString();
+			return usuario;
+			//return "Usuario ID:"+ id +": "+usuario.toString();
 			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		return "Error al intentar leer el Usuario";
+		return null;
+		//return "Error al intentar leer el Usuario";
 	}
 
 }
