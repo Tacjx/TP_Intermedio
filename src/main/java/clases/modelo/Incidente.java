@@ -7,6 +7,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+//La clase incidente refiere al los problemas que surgen en los servicios
+// de los clientes que deben ser resueltos por los tecnicos.
+
 @Entity
 @Table(name="Incidente")
 public class Incidente {

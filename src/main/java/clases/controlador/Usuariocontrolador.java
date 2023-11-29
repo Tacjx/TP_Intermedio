@@ -27,7 +27,7 @@ public class Usuariocontrolador {
 		return "Error al intentar crear el Usuario";
 	}
 	
-	public String eliminarServicio(int id) {
+	public String eliminarUsuario(int id) {
 		SessionFactory sessionFactory=new
 				Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).buildSessionFactory();
 		Session session=sessionFactory.openSession();

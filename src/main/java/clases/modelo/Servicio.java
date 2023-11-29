@@ -7,6 +7,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
+//La clase servicio refiere a los servicios que tiene el cliente.
+
 @Entity
 @Table(name="servicios")
 public class Servicio {

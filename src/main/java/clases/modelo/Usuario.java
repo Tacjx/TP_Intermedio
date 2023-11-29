@@ -7,6 +7,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
+//La clase usuario funciona como cliente y tecnico del sistema.
+
 @Entity
 @Table(name="Usuario")
 public class Usuario {

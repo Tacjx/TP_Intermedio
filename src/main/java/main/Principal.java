@@ -19,7 +19,7 @@ public class Principal {
 			String ManageOption="\n\nMENU:"+"\n---------------------\n"
 					+ "1 - Crear Tecnico\n"
 					+ "2 - Crear Servicio\n"
-					+ "3 - Alta Incidente\n"
+					+ "3 - Cargar Incidente\n"
 					+ "4 - Listado Tecnicos\n"
 					+ "5 - Listado Servicio\n"
 					+ "6 - Listado Incidente\n"
